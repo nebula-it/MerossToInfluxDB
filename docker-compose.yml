@@ -1,0 +1,19 @@
+version: "3"
+
+networks:
+  meross:
+    external: false
+
+services:
+  server:
+    image: nebulait/merossinflux
+    container_name: meross
+    environment:
+      - EMAIL=yourMerossAccountEmail
+      - PASSWORD=yourMerossAccountPassword
+      - InfluxDB_Host=10.10.10.5
+      - DBName=Meross
+      - InfluxDB_Port=8086 
+    restart: on-failure
+    networks:
+      - meross
