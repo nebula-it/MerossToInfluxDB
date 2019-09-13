@@ -16,7 +16,7 @@ cd MerossToInfluxDB/
 ```
 3. Build using docker
 ```
-docker build -t meross:1.0 .
+docker build -t merossinflux:1.0 .
 ```
 4. You image is ready now with tag "meross:1.0"
 5. Start a container using this image, use the following docker run command:
